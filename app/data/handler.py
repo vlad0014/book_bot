@@ -16,7 +16,7 @@ def get_book(id: int = 0, f_path: str = "app/data/books.json") -> dict:
     return get_books(f_path)[id]
 
 
-def save_book(film: dict = {}, f_path: str = "app/data/books.json") -> bool:
+def save_book(book: dict = {}, f_path: str = "app/data/books.json") -> bool:
     with open(f_path) as file_json:
         data = json.load(file_json)
         books = data.get("books")
